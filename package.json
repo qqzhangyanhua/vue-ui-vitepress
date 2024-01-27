@@ -12,6 +12,7 @@
     "docs:dev": "vitepress dev docs",
     "docs:serve": "vitepress serve docs",
     "docs:build": "vitepress build docs",
+    "commitlint": "commitlint --config commitlint.config.js -e -V",
     "prepare": "husky install"
   },
   "dependencies": {
