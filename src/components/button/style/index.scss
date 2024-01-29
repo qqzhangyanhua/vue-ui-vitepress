@@ -1,0 +1,24 @@
+
+
+.s-button{
+    display: inline-block;
+    padding: 0 15px;
+    height: 32px;
+    line-height: 32px;
+    border-radius: 4px;
+    border: 1px solid #dcdfe6;
+    background-color: #cbb0cb;
+    color: #606266;
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+    transition: .1s;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    box-sizing: border-box;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}

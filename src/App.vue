@@ -1,14 +1,21 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue';
 import Test from './Test';
+const increment = (val: string | number) => {
+	console.log('22222222', val);
+};
 </script>
 
 <template>
 	<div>
-		<Test />
-	</div>
+		SButton
+		<s-button> 按钮 </s-button>
+		<s-button disabled> 按钮2 </s-button>
 
-	<HelloWorld msg="Vite + Vue" />
+		<Test @increment="increment">
+			插槽
+			<template #title> 22222 </template>
+		</Test>
+	</div>
 </template>
 
 <style scoped></style>
