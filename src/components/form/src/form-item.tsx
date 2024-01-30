@@ -3,6 +3,8 @@ import {
 	computed,
 	defineComponent,
 	inject,
+	onMounted,
+	onUnmounted,
 	provide,
 	ref
 } from 'vue';
@@ -50,7 +52,22 @@ export default defineComponent({
 				}
 			});
 		};
-		provide('FORM_ITEM', { validate });
+		const formItemCtx = {
+			validate
+		};
+		provide('FORM_ITEM', formItemCtx);
+		// 挂载后注册到FormItems中
+		onMounted(() => {
+			if (props.field) {
+				formCtx?.addItem(formItemCtx);
+			}
+		});
+		onUnmounted(() => {
+			if (props.field) {
+				formCtx?.removeItem(formItemCtx);
+			}
+		});
+
 		const itemClasses = computed(() => {
 			return {
 				's-form-item': true,

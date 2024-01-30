@@ -30,6 +30,8 @@ export type FormProps = ExtractPropTypes<typeof formProps>;
 export type FormContext = {
 	model: any;
 	rules?: Rules;
+	addItem: (item: any) => void;
+	removeItem: (item: any) => void;
 };
 export const formContextToken: InjectionKey<FormContext> =
 	Symbol('FormContextToken');
